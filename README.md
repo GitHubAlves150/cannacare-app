@@ -110,3 +110,6 @@ rm -rf .next
 # Rodar
 npm run dev
 ```
+
+![alt text](image.png)
+
