@@ -151,3 +151,8 @@ cannacare-frontend/
 ├── tsconfig.json                       # ✅ Configuração do TypeScript
 └── README.md
 ``` 
+
+
+Resultado:
+
+![alt text](image-1.png)
