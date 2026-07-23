@@ -102,82 +102,52 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Módulo:** Deploy
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
-```bash
 
+## Etapa 2: Criaçao da tela de login e resgistro de usuário.
+
+Objetivo desta etapa:
+ O objetivo deste etapa é criar a tela inicial de login ouregistro do usuário no sisitema cannacara-app.
+
+## 📁 ESTRUTURA DE PASTAS DO FRONTEND - ETAPA 2 
+
+``` bash
+cannacare-frontend/
+├── app/                                # Páginas da aplicação (App Router)
+│   ├── (auth)/                         # 🆕 Grupo de rotas de autenticação
+│   │   ├── login/
+│   │   │   └── page.tsx               # ✅ Página de login
+│   │   └── register/
+│   │       └── page.tsx               # ✅ Página de registro
+│   ├── (dashboard)/                    # 🔜 Grupo de rotas do dashboard (próxima etapa)
+│   │   └── (a ser criado)
+│   ├── favicon.ico
+│   ├── globals.css                     # ✅ Estilos globais
+│   ├── layout.tsx                      # ✅ Layout principal
+│   └── page.tsx                        # ✅ Página inicial (boas-vindas)
+│
+├── components/                         # Componentes reutilizáveis
+│   ├── ui/                             # ✅ Componentes UI base
+│   │   ├── Button.tsx                  # ✅ Botão reutilizável
+│   │   └── Card.tsx                    # ✅ Card reutilizável
+│   └── layout/                         # 🔜 Componentes de layout (próxima etapa)
+│       └── (a ser criado)
+│
+├── lib/                                # Código utilitário
+│   ├── api/                            # ✅ Cliente e funções da API
+│   │   ├── client.ts                   # ✅ Axios configurado
+│   │   └── auth.ts                     # ✅ Funções de login/registro
+│   └── utils/                          # 🔜 Funções utilitárias (próxima etapa)
+│       └── (a ser criado)
+│
+├── public/                             # Arquivos públicos
+│   └── images/                         # 🔜 Imagens (logo, etc)
+│
+├── .env.local                          # ✅ Variáveis de ambiente
+├── .gitignore
+├── next.config.js                      # ✅ Configuração do Next.js
+├── package.json                        # ✅ Dependências
+├── postcss.config.js                   # ✅ Configuração do PostCSS
+├── tailwind.config.ts                  # ✅ Configuração do Tailwind
+├── tsconfig.json                       # ✅ Configuração do TypeScript
+└── README.md
 ``` 
-## PASSO 1: Criar o projeto Next.js  
-```bash
-# Criar o projeto (mais simples!)
-npx create-next-app@latest cannacare-frontend --typescript --tailwind --app --eslint
-
-# Entrar na pasta
-cd cannacare-frontend
-
-# Instalar dependências essenciais (sem Shadcn)
-npm install axios react-hook-form @hookform/resolvers zod
-``` 
-
-## 📝 PASSO 1: ATUALIZAR O LAYOUT PRINCIPAL
-- Arquivo: app/layout.tsx
-Explicação:
-
-    ✅ children é o conteúdo de cada página
-
-    ✅ A fonte Inter é carregada automaticamente
-
-    ✅ Metadados são injetados no <head> da página
-
-## 📝 PASSO 2: ATUALIZAR OS ESTILOS GLOBAIS
-- Arquivo: app/globals.css
-## 📝 PASSO 3: CRIAR O COMPONENTE BOTÃO 
-- Arquivo: components/ui/Button.tsx
-
-Explicação:
-
-    ✅ Variants: primary (verde), secondary (cinza), outline (borda)
-
-    ✅ Sizes: sm, md, lg
-
-    ✅ Acessibilidade: foco, disabled
-
-    ✅ Reutilizável: pode ser usado em qualquer lugar
-
-## 📝 PASSO 4: CRIAR O COMPONENTE CARD
-Arquivo: components/ui/Card.tsx
-Explicação:
-
-    ✅ Estrutura: Header, Title, Subtitle, Content, Footer
-
-    ✅ Flexível: Pode ser usado de várias formas
-
-    ✅ Limpo: Código simples e fácil de entender
- 
- ## 📝 PASSO 5: CRIAR A PÁGINA DE BOAS-VINDAS  
- Arquivo: app/page.tsx
-
- Explicação:
-
-    ✅ Layout centralizado: Card no meio da tela
-
-    ✅ Logo: Letra "C" estilizada
-
-    ✅ Título: Nome da aplicação
-
-    ✅ Descrição: Funcionalidades principais
-
-    ✅ Botão: "Entrar no Sistema" (link para login)
-
-    ✅ Link: "Cadastre-se" (link para registro)
-
-## 📝 PASSO 6: VERIFICAR SE TUDO FUNCIONA
-Rodar o projeto:
-```bash
-# Limpar cache (se necessário)
-rm -rf .next
-
-# Rodar
-npm run dev
-```
-
-![alt text](image.png)
-
