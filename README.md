@@ -103,56 +103,38 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 2: Criaçao da tela de login e resgistro de usuário.
+## Etapa 2: Tela de login e resgistro com tema escuro
 
 Objetivo desta etapa:
- O objetivo deste etapa é criar a tela inicial de login ouregistro do usuário no sisitema cannacara-app.
+ xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DO FRONTEND - ETAPA 2 
+## 📁 ESTRUTURA DE PASTAS DO FRONTEND - ETAPA 2 com tema escuro
 
 ``` bash
 cannacare-frontend/
-├── app/                                # Páginas da aplicação (App Router)
-│   ├── (auth)/                         # 🆕 Grupo de rotas de autenticação
-│   │   ├── login/
-│   │   │   └── page.tsx               # ✅ Página de login
-│   │   └── register/
-│   │       └── page.tsx               # ✅ Página de registro
-│   ├── (dashboard)/                    # 🔜 Grupo de rotas do dashboard (próxima etapa)
-│   │   └── (a ser criado)
-│   ├── favicon.ico
-│   ├── globals.css                     # ✅ Estilos globais
-│   ├── layout.tsx                      # ✅ Layout principal
-│   └── page.tsx                        # ✅ Página inicial (boas-vindas)
-│
-├── components/                         # Componentes reutilizáveis
-│   ├── ui/                             # ✅ Componentes UI base
-│   │   ├── Button.tsx                  # ✅ Botão reutilizável
-│   │   └── Card.tsx                    # ✅ Card reutilizável
-│   └── layout/                         # 🔜 Componentes de layout (próxima etapa)
-│       └── (a ser criado)
-│
-├── lib/                                # Código utilitário
-│   ├── api/                            # ✅ Cliente e funções da API
-│   │   ├── client.ts                   # ✅ Axios configurado
-│   │   └── auth.ts                     # ✅ Funções de login/registro
-│   └── utils/                          # 🔜 Funções utilitárias (próxima etapa)
-│       └── (a ser criado)
-│
-├── public/                             # Arquivos públicos
-│   └── images/                         # 🔜 Imagens (logo, etc)
-│
-├── .env.local                          # ✅ Variáveis de ambiente
-├── .gitignore
-├── next.config.js                      # ✅ Configuração do Next.js
-├── package.json                        # ✅ Dependências
-├── postcss.config.js                   # ✅ Configuração do PostCSS
-├── tailwind.config.ts                  # ✅ Configuração do Tailwind
-├── tsconfig.json                       # ✅ Configuração do TypeScript
-└── README.md
+├── app/
+│   ├── login/
+│   │   └── page.tsx          # ✅ Página de login
+│   ├── register/
+│   │   └── page.tsx          # ✅ Página de registro
+│   ├── globals.css           # ✅ Estilos globais
+│   ├── layout.tsx            # ✅ Layout principal
+│   └── page.tsx              # ✅ Página inicial (redireciona)
+├── components/
+│   ├── ui/
+│   │   ├── Button.tsx        # ✅ Botão
+│   │   └── Card.tsx          # ✅ Card
+│   └── layout/
+│       ├── Sidebar.tsx       # ⚠️ Pode não existir ainda
+│       └── Header.tsx        # ⚠️ Pode não existir ainda
+├── lib/
+│   ├── api/
+│   │   ├── client.ts         # ✅ Cliente Axios
+│   │   └── auth.ts           # ✅ Funções auth
+│   └── utils.ts              # ✅ Utilitários
+└── .env.local                # ✅ Variáveis de ambiente
 ``` 
 
 
 Resultado:
 
-![alt text](image-1.png)

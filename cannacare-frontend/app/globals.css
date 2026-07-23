@@ -1,67 +1,70 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* ================================================================
- * ESTILOS GLOBAIS
- * ================================================================ */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ================================================================
- * CORES PERSONALIZADAS (Tema da CannaCare)
- * ================================================================ */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* ============================================================
+     * CORES PRINCIPAIS - VERDE CANNABIS
+     * ============================================================ */
+    --primary: 160 70% 30%;        /* Verde cannabis escuro */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 160 60% 45%;      /* Verde cannabis médio */
+    --secondary-foreground: 0 0% 100%;
+    
+    --background: 160 20% 97%;     /* Fundo claro */
+    --foreground: 160 30% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 10%;
+    
+    --muted: 160 15% 90%;
+    --muted-foreground: 160 20% 45%;
+    
+    --accent: 160 70% 35%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 160 15% 85%;
+    --input: 160 15% 85%;
+    --ring: 160 70% 30%;
+    --radius: 0.5rem;
   }
 
-  /* Cores da marca */
-  .bg-cannabis-green {
-    background-color: #2D6A4F;
-  }
-  .bg-cannabis-light {
-    background-color: #52B788;
-  }
-  .bg-cannabis-dark {
-    background-color: #1B4332;
-  }
-  .text-cannabis-green {
-    color: #2D6A4F;
-  }
-  .text-cannabis-light {
-    color: #52B788;
+  .dark {
+    /* ============================================================
+     * TEMA ESCURO - VERDE CANNABIS
+     * ============================================================ */
+    --primary: 160 70% 25%;        /* Verde cannabis bem escuro */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 160 60% 35%;      /* Verde cannabis escuro */
+    --secondary-foreground: 0 0% 100%;
+    
+    --background: 160 30% 6%;      /* Fundo muito escuro */
+    --foreground: 160 15% 90%;
+    
+    --card: 160 25% 10%;           /* Card escuro */
+    --card-foreground: 160 15% 90%;
+    
+    --muted: 160 25% 15%;
+    --muted-foreground: 160 15% 60%;
+    
+    --accent: 160 70% 30%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 160 25% 15%;
+    --input: 160 25% 15%;
+    --ring: 160 70% 25%;
   }
 }
 
-/* ================================================================
- * ESTILOS BASE
- * ================================================================ */
 @layer base {
   * {
     border-color: hsl(var(--border));
@@ -69,5 +72,32 @@ body {
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+  }
+}
+
+/* ================================================================
+ * CORES PERSONALIZADAS DA MARCA
+ * ================================================================ */
+@layer utilities {
+  .bg-cannabis-dark {
+    background-color: #1a3a2a;
+  }
+  .bg-cannabis-green {
+    background-color: #2d6a4f;
+  }
+  .bg-cannabis-light {
+    background-color: #52b788;
+  }
+  .bg-cannabis-cream {
+    background-color: #f8f9fa;
+  }
+  .text-cannabis-green {
+    color: #2d6a4f;
+  }
+  .text-cannabis-light {
+    color: #52b788;
+  }
+  .border-cannabis-green {
+    border-color: #2d6a4f;
   }
 }

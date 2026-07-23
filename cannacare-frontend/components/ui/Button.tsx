@@ -1,9 +1,3 @@
-// ================================================================
-// COMPONENTE BOTÃO
-// ================================================================
-// Um botão reutilizável com diferentes variantes e tamanhos.
-// ================================================================
-
 interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "outline";
@@ -14,27 +8,18 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-// ================================================================
-// MAPA DE CORES POR VARIANTE
-// ================================================================
 const variants = {
-  primary: "bg-green-700 hover:bg-green-800 text-white",
-  secondary: "bg-gray-200 hover:bg-gray-300 text-gray-800",
+  primary: "bg-green-800 hover:bg-green-900 text-white shadow-lg shadow-green-900/20",
+  secondary: "bg-gray-700 hover:bg-gray-800 text-white",
   outline: "border-2 border-green-700 text-green-700 hover:bg-green-50",
 };
 
-// ================================================================
-// MAPA DE TAMANHOS
-// ================================================================
 const sizes = {
   sm: "px-3 py-1.5 text-sm",
   md: "px-4 py-2 text-base",
   lg: "px-6 py-3 text-lg",
 };
 
-// ================================================================
-// COMPONENTE PRINCIPAL
-// ================================================================
 export function Button({
   children,
   variant = "primary",
