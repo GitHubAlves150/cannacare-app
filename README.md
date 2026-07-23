@@ -1,12 +1,15 @@
 ## 📊 PLANO COMPLETO DO FRONTEND (15 ETAPAS)
 
-## Etapa De documentação: Esta etapa está reservada para documentação inicial. 
+## Etapa 01: Criar projeto NEXT.JS.
+
 
 Objetivo:
-   O Objetivo desta branch é documentar configurações iniciais do projeto frontend. Confira a baixo a estrutura de pastas e organização de branchs no decorrer deste projeto.
+   O Next.JS é um framwork React que permite criar aplicações wrb com renderização híbrida (SSR, SSG, CSR).
+   Ele já vem com roteamento baseado em arquivos, otimização de imagens e muitas outras funcionalidades prontas.
+
 
 ## 📋 LISTA COMPLETA DE BRANCHES
-
+```bash
 git checkout -b frontend-etapa-01-configuracao
 git checkout -b frontend-etapa-02-layout-base
 git checkout -b frontend-etapa-03-autenticacao
@@ -22,7 +25,7 @@ git checkout -b frontend-etapa-12-pedidos
 git checkout -b frontend-etapa-13-financeiro
 git checkout -b frontend-etapa-14-perfil
 git checkout -b frontend-etapa-15-deploy
-
+```
 ## Com usar:
 ``` bash
 # 1. Certifique-se de estar na branch main
@@ -306,3 +309,141 @@ cannacare-frontend/
 ### 4. Comunicação com a API
 * **Axios**: Cliente HTTP para centralização de interceptors (injeção automatizada do Token JWT e tratamento global de erros como `401 Unauthorized` e `403 Forbidden`).
 * **Base URL de Desenvolvimento**: `http://localhost:8080/api/`
+
+## 📝 PASSO 1: CRIAR O PROJETO NEXT.JS:
+
+ Criar o projeto com TypeScript e Tailwind CSS
+ O comando abaixo cria uma nova pasta 'cannacare-frontend'
+ com todas as configurações necessárias  
+
+``` npx create-next-app@latest cannacare-frontend --typescript --tailwind --app```
+
+ Explicação das flags:   
+```  --typescript  → Usa TypeScript (tipagem forte, melhor para manutenção) ```   
+```  --tailwind    → Usa Tailwind CSS (estilização rápida e moderna)    ```   
+```  --app         → Usa o App Router (novo sistema de roteamento do Next.js 14) ```    
+
+## O que aconteceu?  
+
+O comando criou a seguinte estrutura:
+
+``` bash
+cannacare-frontend/
+├── .gitignore           # Arquivos que não vão para o Git
+├── package.json         # Dependências do projeto
+├── package-lock.json    # Versões exatas das dependências
+├── tsconfig.json        # Configuração do TypeScript
+├── tailwind.config.ts   # Configuração do Tailwind CSS
+├── postcss.config.js    # Configuração do PostCSS (processa CSS)
+├── next.config.js       # Configuração do Next.js
+├── next-env.d.ts        # Tipos do Next.js para TypeScript
+├── public/              # Arquivos públicos (imagens, fonts)
+│   ├── next.svg
+│   └── vercel.svg
+└── src/
+    └── app/             # Páginas da aplicação (App Router)
+        ├── favicon.ico
+        ├── globals.css          # Estilos globais
+        ├── layout.tsx           # Layout principal
+        └── page.tsx             # Página inicial
+
+``` 
+
+## 📝 PASSO 2: ENTRAR NA PASTA E INSTALAR DEPENDÊNCIAS
+
+Entrar na pasta do projeto
+- cd cannacare-frontend
+
+## Instalar as dependências essenciais que vamos usar
+- npm install axios @tanstack/react-query react-hook-form @hookform/resolvers zod
+- npm install date-fns class-variance-authority clsx tailwind-merge lucide-react
+- npm install @radix-ui/react-slot @radix-ui/react-dialog @radix-ui/react-dropdown-menu
+
+## Explicação de cada dependência:
+
+| Pacote | Para que serve? |
+| :--- | :--- |
+| `axios` | Cliente HTTP para fazer requisições à API (GET, POST, PUT, DELETE) |
+| `@tanstack/react-query` | Gerenciamento de estado assíncrono (cache, loading, erros) |
+| `react-hook-form` | Gerenciamento de formulários com validação |
+| `@hookform/resolvers` | Integração do react-hook-form com Zod |
+| `zod` | Validação de dados com esquemas (schema validation) |
+| `date-fns` | Manipulação de datas (formatar, calcular diferenças) |
+| `class-variance-authority` | Criar variantes de componentes (ex: button primary, secondary) |
+| `clsx` | Concatenar classes CSS condicionalmente |
+| `tailwind-merge` | Mesclar classes Tailwind sem conflitos |
+| `lucide-react` | Ícones para React |
+| `@radix-ui/react-*` | Componentes acessíveis (base do shadcn/ui) |
+
+## 📝 PASSO 3: CONFIGURAR O SHADCN/UI
+
+O que é schadcn/ui?
+    Shadcn/ui é uma coleção de componentes React reutilizáveis e acessíveis, construídos com Radix UI e estilizados com Tailwind CSS. Ele permite criar interfaces bonitas rapidamente.     
+
+```bash
+
+# Inicializar o Shadcn/ui
+npx shadcn-ui@latest init
+
+# Durante a inicialização, ele vai perguntar algumas coisas:
+# 1. Style: default (estilo padrão)
+# 2. Base color: slate (cor base)
+# 3. CSS variables: Yes (usar variáveis CSS para temas)
+# 4. src/ directory: Yes (usar src/ como pasta de componentes)
+
+# Adicionar os componentes base (vamos usar em toda a aplicação)
+npx shadcn add button
+npx shadcn add card
+npx shadcn add input
+npx shadcn add label
+npx shadcn add table
+npx shadcn add form
+npx shadcn add dialog
+npx shadcn add select
+npx shadcn add toast
+npx shadcn add dropdown-menu
+npx shadcn add avatar
+npx shadcn add badge
+
+```
+## O que aconteceu?
+O Shadcn criou a pasta src/components/ui/ com todos os componentes adicionados.
+```bash
+
+src/components/ui/
+├── button.tsx          # Botão com variantes
+├── card.tsx            # Cards para conteúdo
+├── input.tsx           # Campo de entrada
+├── label.tsx           # Rótulo para inputs
+├── table.tsx           # Tabela
+├── form.tsx            # Formulário com validação
+├── dialog.tsx          # Modal/diálogo
+├── select.tsx          # Dropdown/select
+├── toast.tsx           # Notificações
+├── dropdown-menu.tsx   # Menu dropdown
+├── avatar.tsx          # Avatar do usuário
+├── badge.tsx           # Badge/etiqueta
+└── index.ts            # Exporta todos os componentes
+
+``` 
+## 📝 PASSO 4: CONFIGURAR AS VARIÁVEIS DE AMBIENTE
+
+O que são variáveis de ambiente?
+ São valores que podem mudar entre ambientes (desenvolvimento, produção). Não devem ser commitadas no Git.
+
+```bash
+# Criar o arquivo .env.local na raiz do projeto
+# Este arquivo NUNCA será commitado (já está no .gitignore)
+touch .env.local
+```
+
+## 🚀 RODAR O PROJETO
+
+Limpar cache (se necessário)
+- rm -rf .next
+
+Instalar dependências (se necessário)
+- npm install
+
+Rodar o projeto
+- npm run dev
