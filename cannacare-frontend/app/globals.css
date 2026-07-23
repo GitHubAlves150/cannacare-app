@@ -4,30 +4,20 @@
 
 @layer base {
   :root {
-    /* ============================================================
-     * CORES PRINCIPAIS - VERDE CANNABIS
-     * ============================================================ */
-    --primary: 160 70% 30%;        /* Verde cannabis escuro */
+    --primary: 160 70% 30%;
     --primary-foreground: 0 0% 100%;
-    
-    --secondary: 160 60% 45%;      /* Verde cannabis médio */
+    --secondary: 160 60% 45%;
     --secondary-foreground: 0 0% 100%;
-    
-    --background: 160 20% 97%;     /* Fundo claro */
+    --background: 160 20% 97%;
     --foreground: 160 30% 10%;
-    
     --card: 0 0% 100%;
     --card-foreground: 160 30% 10%;
-    
     --muted: 160 15% 90%;
     --muted-foreground: 160 20% 45%;
-    
     --accent: 160 70% 35%;
     --accent-foreground: 0 0% 100%;
-    
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
     --border: 160 15% 85%;
     --input: 160 15% 85%;
     --ring: 160 70% 30%;
@@ -35,30 +25,20 @@
   }
 
   .dark {
-    /* ============================================================
-     * TEMA ESCURO - VERDE CANNABIS
-     * ============================================================ */
-    --primary: 160 70% 25%;        /* Verde cannabis bem escuro */
+    --primary: 160 70% 25%;
     --primary-foreground: 0 0% 100%;
-    
-    --secondary: 160 60% 35%;      /* Verde cannabis escuro */
+    --secondary: 160 60% 35%;
     --secondary-foreground: 0 0% 100%;
-    
-    --background: 160 30% 6%;      /* Fundo muito escuro */
+    --background: 160 30% 6%;
     --foreground: 160 15% 90%;
-    
-    --card: 160 25% 10%;           /* Card escuro */
+    --card: 160 25% 10%;
     --card-foreground: 160 15% 90%;
-    
     --muted: 160 25% 15%;
     --muted-foreground: 160 15% 60%;
-    
     --accent: 160 70% 30%;
     --accent-foreground: 0 0% 100%;
-    
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
-    
     --border: 160 25% 15%;
     --input: 160 25% 15%;
     --ring: 160 70% 25%;
@@ -75,9 +55,6 @@
   }
 }
 
-/* ================================================================
- * CORES PERSONALIZADAS DA MARCA
- * ================================================================ */
 @layer utilities {
   .bg-cannabis-dark {
     background-color: #1a3a2a;

@@ -9,9 +9,9 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: "bg-green-800 hover:bg-green-900 text-white shadow-lg shadow-green-900/20",
-  secondary: "bg-gray-700 hover:bg-gray-800 text-white",
-  outline: "border-2 border-green-700 text-green-700 hover:bg-green-50",
+  primary: "bg-[#2d6a4f] hover:bg-[#52b788] text-white shadow-lg shadow-green-900/30 transition-all duration-200",
+  secondary: "bg-gray-200 hover:bg-gray-300 text-gray-800",
+  outline: "border-2 border-[#2d6a4f] text-[#2d6a4f] hover:bg-green-50",
 };
 
 const sizes = {
@@ -36,7 +36,7 @@ export function Button({
       disabled={disabled}
       className={`
         rounded-lg font-medium transition-all duration-200
-        focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+        focus:outline-none focus:ring-2 focus:ring-[#52b788] focus:ring-offset-2
         disabled:opacity-50 disabled:cursor-not-allowed
         ${variants[variant]}
         ${sizes[size]}
