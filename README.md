@@ -1,3 +1,4 @@
+
 ## 📋 CHECKLIST DE VALIDAÇÃO DO SISTEMA 
 
 Vamos verificar todos os módulos e funcionalidades:
@@ -32,6 +33,27 @@ Resultado:
 | **Ações Rápidas** | Botões funcionam? | ⬜ |
 
 ---
+
+Endpoint: /api/dashboard/patients
+Tabela principal: patients
+O que verificar:
+```bash
+-- Total de pacientes
+SELECT COUNT(*) FROM patients;
+
+-- Pacientes por status
+SELECT status, COUNT(*) as total 
+FROM patients 
+WHERE deleted_at IS NULL 
+GROUP BY status;
+
+-- Pacientes sociais
+SELECT COUNT(*) FROM patients WHERE is_social_patient = true;
+
+-- Novos pacientes no mês
+SELECT COUNT(*) FROM patients 
+WHERE created_at >= date_trunc('month', CURRENT_DATE);
+```
 
 ## 3. 👤 PACIENTES
 
