@@ -89,33 +89,33 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 12: Gestão de financeira
+## Etapa 13: Relatório
 
 
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 12
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 13
 
 
 ``` bash
-app/dashboard/financial/
-├── page.tsx                    # Visão geral financeira
-├── subscriptions/
-│   └── page.tsx                # Lista de anuidades
-└── payments/
-    └── page.tsx                # Lista de pagamentos
+app/dashboard/reports/
+└── page.tsx                    # Página de relatórios
 
 ``` 
 
 
 ## ✅ O QUE ESTE MÓDULO FAZ
 
-### 💳 Estrutura de Páginas do Módulo Financeiro
+### 📈 Catálogo de Relatórios e Indicadores (Views)
 
-| Página | URL | Funcionalidade |
-| :--- | :--- | :--- |
-| **Visão Geral** | `/dashboard/financial` | Painel com cards contendo o resumo consolidado do fluxo financeiro |
-| **Anuidades** | `/dashboard/financial/subscriptions` | Listagem de membros acompanhada do formulário de criação de anuidades |
-| **Pagamentos** | `/dashboard/financial/payments` | Histórico de transações com ações para criar e confirmar pagamentos |
+| Relatório | Descrição |
+| :--- | :--- |
+| **📊 Pacientes** | Gráfico com a distribuição analítica de pacientes por status regulatório |
+| **📋 Receitas Vencidas** | Listagem detalhada e auditoria de receitas médicas expiradas |
+| **👨‍⚕️ Top Médicos** | Painel dos profissionais médicos que registam o maior volume de prescrições |
+| **🏪 Estoque Baixo** | Alerta e relação de produtos cujo inventário atingiu o limite mínimo |
+
+
+

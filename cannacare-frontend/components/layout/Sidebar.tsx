@@ -24,6 +24,7 @@ const menuItems = [
   { name: "Estoque", href: "/dashboard/stock", icon: "🏪" },
   { name: "Pedidos", href: "/dashboard/orders", icon: "🛒" },
   { name: "Financeiro", href: "/dashboard/financial", icon: "💰" },
+  { name: "Relatórios", href: "/dashboard/reports", icon: "📈" }, // 🆕
 ];
 
 export function Sidebar({ open }: SidebarProps) {
