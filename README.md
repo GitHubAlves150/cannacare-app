@@ -89,7 +89,9 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 5: CRUD de médicos(Completo)
+## Etapa 6: gestão de docuemntos
+- Módulo: Documentos
+- Endpoints: POST/GET /api/patients/{id}/documents, PATCH /api/documents/{id}/status
 
 Objetivo desta etapa:
  xxxxxxxxx
@@ -100,29 +102,33 @@ Objetivo desta etapa:
  cannacare-frontend/
 ├── app/
 │   └── dashboard/
-│       └── prescriptions/              # 🆕 Página de receitas
-│           └── page.tsx                # Lista de receitas
+│       └── patients/
+│           └── [id]/                       # 🆕 Página de detalhes do paciente
+│               └── documents/
+│                   └── page.tsx            # 🆕 Lista de documentos
 │
 ├── components/
 │   └── forms/
-│       └── PrescriptionForm.tsx        # 🆕 Formulário de receita
+│       └── DocumentUpload.tsx              # 🆕 Upload de documentos
 │
 ├── lib/
 │   └── api/
-│       └── prescriptions.ts            # 🆕 Serviço de receitas
+│       └── documents.ts                    # 🆕 Serviço de documentos
 │
 └── ... (restante da estrutura)
+
 
 ``` 
 ## ✅ O QUE ESTA PÁGINA FAZ
 
-### 📜 Funcionalidades do Módulo de Receitas
 
 | Funcionalidade | Descrição |
 | :--- | :--- |
-| **📋 Lista receitas** | Mostra todas as receitas médicas cadastradas no sistema |
-| **🔍 Status visual** | Exibe marcadores coloridos diferenciando receitas como: Válida, Próxima a vencer ou Vencida |
-| **✅ Validar receita** | Executa a verificação lógica das datas e regras para confirmar se a receita está válida |
+| **📋 Lista documentos** | Mostra todos os documentos anexados ao perfil do paciente |
+| **📤 Upload** | Permite o envio de novos ficheiros e comprovativos para o servidor |
+| **✅ Aprovar/Rejeitar** | Altera o status de validação do documento enviado (Aprovado/Rejeitado) |
+| **👁️ Visualizar** | Abre o documento de forma segura numa nova aba do navegador para análise |
+
 
 ### 📐 Arquitetura do Componente Sidebar
 ```bash
