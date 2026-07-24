@@ -89,35 +89,33 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 11: Gestão de pedidos
+## Etapa 12: Gestão de financeira
 
 
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 11
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 12
 
 
 ``` bash
-
-app/dashboard/orders/
-├── page.tsx                    # Lista de pedidos
-├── new/
-│   └── page.tsx                # Criar novo pedido
-└── [id]/
-    └── page.tsx                # Detalhes do pedido
+app/dashboard/financial/
+├── page.tsx                    # Visão geral financeira
+├── subscriptions/
+│   └── page.tsx                # Lista de anuidades
+└── payments/
+    └── page.tsx                # Lista de pagamentos
 
 ``` 
 
 
 ## ✅ O QUE ESTE MÓDULO FAZ
 
-### 📦 Estrutura de Páginas do Módulo de Pedidos
+### 💳 Estrutura de Páginas do Módulo Financeiro
 
 | Página | URL | Funcionalidade |
 | :--- | :--- | :--- |
-| **Lista** | `/dashboard/orders` | Lista cronológica de todos os pedidos realizados no sistema |
-| **Novo** | `/dashboard/orders/new` | Formulário dinâmico para a criação e registo de um novo pedido |
-| **Detalhes** | `/dashboard/orders/[id]` | Visualização detalhada dos itens do pedido acompanhada de ações de status |
-
+| **Visão Geral** | `/dashboard/financial` | Painel com cards contendo o resumo consolidado do fluxo financeiro |
+| **Anuidades** | `/dashboard/financial/subscriptions` | Listagem de membros acompanhada do formulário de criação de anuidades |
+| **Pagamentos** | `/dashboard/financial/payments` | Histórico de transações com ações para criar e confirmar pagamentos |
