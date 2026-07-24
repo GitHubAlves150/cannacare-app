@@ -89,63 +89,36 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 6: gestão de docuemntos
-- Módulo: Documentos
-- Endpoints: POST/GET /api/patients/{id}/documents, PATCH /api/documents/{id}/status
+## Etapa 7: gestão de receita
+
+
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 6
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 7
 
 ``` bash
- cannacare-frontend/
-├── app/
-│   └── dashboard/
-│       └── patients/
-│           └── [id]/                       # 🆕 Página de detalhes do paciente
-│               └── documents/
-│                   └── page.tsx            # 🆕 Lista de documentos
-│
-├── components/
-│   └── forms/
-│       └── DocumentUpload.tsx              # 🆕 Upload de documentos
-│
-├── lib/
-│   └── api/
-│       └── documents.ts                    # 🆕 Serviço de documentos
-│
-└── ... (restante da estrutura)
+ app/dashboard/prescriptions/
+└── page.tsx                    # Lista de receitas
 
 
 ``` 
-## ✅ O QUE ESTA PÁGINA FAZ
+### 📋 Especificações do Módulo de Receitas
 
-
-| Funcionalidade | Descrição |
+| Item | Descrição |
 | :--- | :--- |
-| **📋 Lista documentos** | Mostra todos os documentos anexados ao perfil do paciente |
-| **📤 Upload** | Permite o envio de novos ficheiros e comprovativos para o servidor |
-| **✅ Aprovar/Rejeitar** | Altera o status de validação do documento enviado (Aprovado/Rejeitado) |
-| **👁️ Visualizar** | Abre o documento de forma segura numa nova aba do navegador para análise |
+| **Arquivo** | `app/dashboard/prescriptions/page.tsx` |
+| **Funcionalidade** | Listar receitas com status (válida, vencida, próxima a vencer) |
+| **Botão** | "Nova Receita" (abre formulário de cadastro) |
+| **Ação** | "Validar" (executa a verificação para confirmar se a receita é válida) |
 
 
-### 📐 Arquitetura do Componente Sidebar
-```bash
 
-components/layout/Sidebar.tsx
-├── importações (Link, usePathname, LogOut)
-├── interface SidebarProps
-├── ✅ const menuItems (com Receitas incluído)
-├── export function Sidebar({ open }: SidebarProps)
-│   ├── return (
-│   │   ├── <aside> (sidebar)
-│   │   │   ├── Logo (CannaCare)
-│   │   │   ├── <nav> (menuItems.map)
-│   │   │   └── Logout
-│   │   └── )
-│   └── )
-└── }
-```
 
 Resultado:
+### 🚀 Conclusão dos Testes
+
+| Status | Resultado | Ação |
+| :---: | :--- | :--- |
+| ✅ | **Sucesso Absoluto** | Todos os endpoints respondem corretamente com o novo padrão visual e autenticação JWT alinhados. |
