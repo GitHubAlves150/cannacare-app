@@ -23,7 +23,12 @@ export default function LoginPage() {
       const response = await login({ email, password });
 
       if (response.success && response.data) {
+        // --- SALVAR TOKEN EM COOKIE (para o middleware) ---
+        document.cookie = `token=${response.data.token}; path=/; max-age=86400; SameSite=Lax`;
+        
+        // --- SALVAR TOKEN EM LOCALSTORAGE (para o cliente) ---
         localStorage.setItem("token", response.data.token);
+        
         router.push("/dashboard");
       } else {
         setError(response.error || "Erro ao fazer login");

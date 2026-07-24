@@ -8,12 +8,6 @@ interface SidebarProps {
   open: boolean;
 }
 
-
-
-
-// ============================================================
-// LISTA DE MENU - ATUALIZE AQUI!
-// ============================================================
 const menuItems = [
   { name: "Visão Geral", href: "/dashboard", icon: "📊" },
   { name: "Pacientes", href: "/dashboard/patients", icon: "👤" },
@@ -25,17 +19,14 @@ const menuItems = [
   { name: "Pedidos", href: "/dashboard/orders", icon: "🛒" },
   { name: "Financeiro", href: "/dashboard/financial", icon: "💰" },
   { name: "Relatórios", href: "/dashboard/reports", icon: "📈" },
-  { name: "Perfil", href: "/dashboard/profile", icon: "👤" }, // 🆕
+  { name: "Perfil", href: "/dashboard/profile", icon: "👤" },
 ];
 
 export function Sidebar({ open }: SidebarProps) {
   const pathname = usePathname();
 
   return (
-    <aside
-      className={`fixed top-0 left-0 z-40 h-screen bg-[#1a3a2a] border-r border-[#2d6a4f] transition-all duration-300 ${open ? "w-64" : "w-20"
-        }`}
-    >
+    <aside className={`fixed top-0 left-0 z-40 h-screen bg-[#1a3a2a] border-r border-[#2d6a4f] transition-all duration-300 ${open ? "w-64" : "w-20"}`}>
       <div className="flex flex-col h-full">
         {/* Logo */}
         <div className="flex items-center h-16 px-4 border-b border-[#2d6a4f]">
@@ -55,10 +46,7 @@ export function Sidebar({ open }: SidebarProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${active
-                  ? "bg-[#2d6a4f] text-white"
-                  : "text-[#52b788] hover:bg-[#2d6a4f]/30 hover:text-white"
-                  }`}
+                className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${active ? "bg-[#2d6a4f] text-white" : "text-[#52b788] hover:bg-[#2d6a4f]/30 hover:text-white"}`}
               >
                 <span className="text-lg">{item.icon}</span>
                 {open && <span className="text-sm font-medium">{item.name}</span>}
@@ -71,6 +59,7 @@ export function Sidebar({ open }: SidebarProps) {
         <div className="border-t border-[#2d6a4f] p-4">
           <button
             onClick={() => {
+              document.cookie = "token=; path=/; max-age=0; SameSite=Lax";
               localStorage.removeItem("token");
               window.location.href = "/login";
             }}
