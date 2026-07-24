@@ -100,7 +100,7 @@ export default function PatientsPage() {
               <tbody className="divide-y divide-[#2d6a4f]/30">
                 {patients.map((patient) => (
                   <tr key={patient.id} className="hover:bg-[#2d6a4f]/20 transition-colors">
-                    <td className="px-4 py-3 text-white">{patient.full_name}</td>
+                    <td className="px-4 py-3 text-[#52b788]">{patient.full_name}</td>
                     <td className="px-4 py-3 text-[#52b788]">{patient.cpf}</td>
                     <td className="px-4 py-3 text-[#52b788]">{patient.email}</td>
                     <td className="px-4 py-3">
