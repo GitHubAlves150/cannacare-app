@@ -89,76 +89,34 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 7: gestão de receita
+## Etapa 10: Estoque
 
 
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 9
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 10
 
 
 ``` bash
 
-app/dashboard/products/
-└── page.tsx                    # Lista de produtos + formulário
-
-
-``` 
-
-## ✅ O QUE ESTA PÁGINA FAZ
-
-### 📦 Funcionalidades do Módulo de Produtos
-
-| Funcionalidade | Descrição |
-| :--- | :--- |
-| **📋 Lista produtos** | Mostra todos os produtos e óleos cadastrados no sistema |
-| **➕ Cadastrar** | Formulário dinâmico para a adição de um novo produto ao catálogo |
-| **✏️ Editar** | Permite a alteração dos dados cadastrais e especificações do produto |
-| **🔄 Ativar/Desativar** | Altera a disponibilidade e o status ativo do produto na plataforma |
-| **⚠️ Estoque baixo** | Alerta visual automático quando a quantidade do produto atinge o limite mínimo |
-
-## 🎯 PÁGINA PRINCIPAL: /dashboard/products
-
-```bash
-┌────────────────────────────────────────────────────────────────────────────┐
-│                         PÁGINA DE PRODUTOS                                 │
-├────────────────────────────────────────────────────────────────────────────┤
-│                                                                            │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  Cabeçalho                                                          │   │
-│  │  "Produtos - Gerencie o catálogo de produtos"                       │   │
-│  │  [+ Novo Produto]  ← Botão para abrir o formulário                  │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                            │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  ⚠️ ALERTA DE ESTOQUE BAIXO (se houver)                             │   │
-│  │  Produtos com quantidade abaixo do mínimo definido                  │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                            │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  FORMULÁRIO DE PRODUTO (aparece ao clicar em "+ Novo Produto")      │   │
-│  │                                                                     │   │
-│  │  Nome: [___________]                                                │   │
-│  │  Descrição: [___________]                                           │   │
-│  │  Preço: [_________]  Estoque Mínimo: [_________]                    │   │
-│  │                                                                     │   │
-│  │  [Cadastrar]  [Cancelar]                                            │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                            │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  TABELA DE PRODUTOS                                                 │   │
-│  │                                                                     │   │
-│  │  Nome         │ Preço    │ Estoque Mínimo │ Status   │ Ações        │   │
-│  │  ──────────── │ ──────── │ ───────────── │ ──────── │ ───────────   │   │
-│  │  Óleo CBD 10% │ R$ 150,00│ 10            │ Ativo    │ [Editar]      │   │
-│  │  Óleo CBD 20% │ R$ 250,00│ 5             │ Ativo    │ [Editar]      │   │
-│  │  Cápsulas CBD │ R$ 80,00 │ 20            │ Inativo  │ [Editar]      │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-└────────────────────────────────────────────────────────────────────────────┘
+app/dashboard/stock/
+├── page.tsx                    # Página principal de estoque
+├── lots/
+│   └── page.tsx                # Lista de lotes
+└── movements/
+    └── page.tsx                # Movimentações
 
 ``` 
 
-Resultado:
-![alt text](image-4.png)
+## ✅ O QUE ESTE MÓDULO FAZ
+
+### 🏪 Estrutura de Páginas do Módulo de Estoque
+
+| Página | URL | Funcionalidade |
+| :--- | :--- | :--- |
+| **Visão Geral** | `/dashboard/stock` | Painel com cards contendo o resumo consolidado do estoque |
+| **Lotes** | `/dashboard/stock/lots` | Listagem unificada acompanhada do formulário de entrada de novos lotes |
+| **Movimentações** | `/dashboard/stock/movements` | Histórico cronológico completo de todas as movimentações e ajustes |
+
