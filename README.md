@@ -89,34 +89,35 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 10: Estoque
+## Etapa 11: Gestão de pedidos
 
 
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 10
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 11
 
 
 ``` bash
 
-app/dashboard/stock/
-├── page.tsx                    # Página principal de estoque
-├── lots/
-│   └── page.tsx                # Lista de lotes
-└── movements/
-    └── page.tsx                # Movimentações
+app/dashboard/orders/
+├── page.tsx                    # Lista de pedidos
+├── new/
+│   └── page.tsx                # Criar novo pedido
+└── [id]/
+    └── page.tsx                # Detalhes do pedido
 
 ``` 
 
+
 ## ✅ O QUE ESTE MÓDULO FAZ
 
-### 🏪 Estrutura de Páginas do Módulo de Estoque
+### 📦 Estrutura de Páginas do Módulo de Pedidos
 
 | Página | URL | Funcionalidade |
 | :--- | :--- | :--- |
-| **Visão Geral** | `/dashboard/stock` | Painel com cards contendo o resumo consolidado do estoque |
-| **Lotes** | `/dashboard/stock/lots` | Listagem unificada acompanhada do formulário de entrada de novos lotes |
-| **Movimentações** | `/dashboard/stock/movements` | Histórico cronológico completo de todas as movimentações e ajustes |
+| **Lista** | `/dashboard/orders` | Lista cronológica de todos os pedidos realizados no sistema |
+| **Novo** | `/dashboard/orders/new` | Formulário dinâmico para a criação e registo de um novo pedido |
+| **Detalhes** | `/dashboard/orders/[id]` | Visualização detalhada dos itens do pedido acompanhada de ações de status |
 
