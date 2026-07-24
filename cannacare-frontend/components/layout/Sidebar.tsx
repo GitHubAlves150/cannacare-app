@@ -24,7 +24,8 @@ const menuItems = [
   { name: "Estoque", href: "/dashboard/stock", icon: "🏪" },
   { name: "Pedidos", href: "/dashboard/orders", icon: "🛒" },
   { name: "Financeiro", href: "/dashboard/financial", icon: "💰" },
-  { name: "Relatórios", href: "/dashboard/reports", icon: "📈" }, // 🆕
+  { name: "Relatórios", href: "/dashboard/reports", icon: "📈" },
+  { name: "Perfil", href: "/dashboard/profile", icon: "👤" }, // 🆕
 ];
 
 export function Sidebar({ open }: SidebarProps) {
@@ -55,8 +56,8 @@ export function Sidebar({ open }: SidebarProps) {
                 key={item.href}
                 href={item.href}
                 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all ${active
-                    ? "bg-[#2d6a4f] text-white"
-                    : "text-[#52b788] hover:bg-[#2d6a4f]/30 hover:text-white"
+                  ? "bg-[#2d6a4f] text-white"
+                  : "text-[#52b788] hover:bg-[#2d6a4f]/30 hover:text-white"
                   }`}
               >
                 <span className="text-lg">{item.icon}</span>

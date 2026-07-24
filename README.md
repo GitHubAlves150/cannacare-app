@@ -84,38 +84,42 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Módulo:** Perfil
   * **Endpoints:** `GET/PUT /api/users/me`
 
+* **Etapa Review: `frontend-etapa-Review`**
+  * **Módulo:** Reviewl
+  * **Testar todos os endpoints:**
+
 * **Etapa 15: `frontend-etapa-15-deploy`**
   * **Módulo:** Deploy
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 13: Relatório
+## Etapa 14: Perfil
 
 
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 13
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 14
 
 
 ``` bash
-app/dashboard/reports/
-└── page.tsx                    # Página de relatórios
+
+app/dashboard/profile/
+└── page.tsx                    # Página de perfil
 
 ``` 
 
 
 ## ✅ O QUE ESTE MÓDULO FAZ
 
-### 📈 Catálogo de Relatórios e Indicadores (Views)
+### ⚙️ Funcionalidades do Módulo de Perfil e Configurações
 
-| Relatório | Descrição |
+| Funcionalidade | Descrição |
 | :--- | :--- |
-| **📊 Pacientes** | Gráfico com a distribuição analítica de pacientes por status regulatório |
-| **📋 Receitas Vencidas** | Listagem detalhada e auditoria de receitas médicas expiradas |
-| **👨‍⚕️ Top Médicos** | Painel dos profissionais médicos que registam o maior volume de prescrições |
-| **🏪 Estoque Baixo** | Alerta e relação de produtos cujo inventário atingiu o limite mínimo |
+| **👤 Visualizar Perfil** | Exibe as informações cadastrais do usuário (nome, e-mail, função administrativa e status) |
+| **✏️ Editar Perfil** | Permite a alteração segura dos dados básicos de identificação (nome e e-mail) |
+| **🔑 Alterar Senha** | Realiza a substituição da palavra-passe com fluxo de validação e confirmação dos dados |
 
 
 
