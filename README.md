@@ -96,29 +96,38 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 7
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 8
+
+Módulo: Acolhimento
+Endpoints: POST/GET/PUT/DELETE /api/patients/{id}/anamnesis
 
 ``` bash
- app/dashboard/prescriptions/
-└── page.tsx                    # Lista de receitas
+app/dashboard/
+├── patients/
+│   └── [id]/
+│       └── anamnesis/
+│           └── page.tsx                    # 🆕 Lista de anamneses
+└── anamnesis/
+    └── new/
+        └── page.tsx                        # 🆕 Nova anamnese
 
 
 ``` 
-### 📋 Especificações do Módulo de Receitas
 
-| Item | Descrição |
-| :--- | :--- |
-| **Arquivo** | `app/dashboard/prescriptions/page.tsx` |
-| **Funcionalidade** | Listar receitas com status (válida, vencida, próxima a vencer) |
-| **Botão** | "Nova Receita" (abre formulário de cadastro) |
-| **Ação** | "Validar" (executa a verificação para confirmar se a receita é válida) |
+## ✅ FLUXO COMPLETO 
 
+```bash
+Menu → Acolhimento → Lista de pacientes
+                        ↓
+                Clicar "Ver Anamneses"
+                        ↓
+            Lista de anamneses do paciente
+                        ↓
+                "Nova Anamnese"
+                        ↓
+            Formulário de anamnese
 
-
+``` 
 
 Resultado:
-### 🚀 Conclusão dos Testes
-
-| Status | Resultado | Ação |
-| :---: | :--- | :--- |
-| ✅ | **Sucesso Absoluto** | Todos os endpoints respondem corretamente com o novo padrão visual e autenticação JWT alinhados. |
+![alt text](image-4.png)
