@@ -20,20 +20,6 @@ Vantagens Desta Abordagem:
 
     📁 ESTRUTURA SIMPLIFICADA DO FRONTEND  
 
-📁 ESTRUTURA DA ETAPA 1
-
-```bash
-cannacare-frontend/
-├── app/
-│   ├── layout.tsx          # Layout principal (já existe)
-│   ├── globals.css         # Estilos globais (já existe)
-│   └── page.tsx            # Página inicial (vamos criar!)
-├── components/
-│   └── ui/                 # Componentes básicos
-│       ├── Button.tsx      # 🆕 Botão reutilizável
-│       └── Card.tsx        # 🆕 Card reutilizável
-└── public/
-    └── images/             # Para imagens futuras
 
 
 ``` 
@@ -103,89 +89,32 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 4: CRUD de pacientes(Completo)
+## Etapa 5: CRUD de médicos(Completo)
 
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DO FRONTEND - ETAPA 2 com tema escuro
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 5
 
 ``` bash
  cannacare-frontend/
 ├── app/
-│   ├── dashboard/
-│   │   ├── layout.tsx              # Layout do dashboard (sidebar + header)
-│   │   ├── page.tsx                # Dashboard principal (estatísticas)
-│   │   └── patients/               # 🆕 Página de pacientes
-│   │       └── page.tsx            # Lista de pacientes (Fila Regulatória)
-│   ├── login/
-│   │   └── page.tsx                # Login
-│   ├── register/
-│   │   └── page.tsx                # Registro
-│   ├── favicon.ico
-│   ├── globals.css                 # Estilos globais
-│   ├── layout.tsx                  # Layout principal
-│   └── page.tsx                    # Redireciona para login
+│   └── dashboard/
+│       └── doctors/                    # 🆕 Página de médicos
+│           └── page.tsx                # Lista de médicos
 │
 ├── components/
-│   ├── layout/                     # Componentes de layout
-│   │   ├── Sidebar.tsx             # Menu lateral
-│   │   └── Header.tsx              # Cabeçalho
-│   └── ui/                         # Componentes UI reutilizáveis
-│       ├── Button.tsx
-│       └── Card.tsx
+│   └── forms/
+│       └── DoctorForm.tsx              # 🆕 Formulário de médico
 │
 ├── lib/
-│   ├── api/                        # 🆕 Serviços da API
-│   │   ├── client.ts               # Cliente Axios
-│   │   ├── auth.ts                 # Autenticação
-│   │   ├── dashboard.ts            # Dashboard (estatísticas)
-│   │   └── patients.ts             # 🆕 Pacientes (CRUD)
-│   └── utils.ts                    # Funções utilitárias
+│   └── api/
+│       └── doctors.ts                  # 🆕 Serviço de médicos
 │
-├── types/                          # Tipos TypeScript
-│   └── index.ts
-│
-├── .env.local                      # Variáveis de ambiente
-├── next.config.js
-├── package.json
-├── tailwind.config.ts
-└── tsconfig.json
+└── ... (restante da estrutura)
+
 ``` 
 
 
 Resultado:
-
-## ✅ O QUE ESTA PÁGINA FAZ
-
-### 📋 Funcionalidades do Módulo de Pacientes
-
-| Funcionalidade | Descrição |
-| :--- | :--- |
-| **📋 Lista pacientes** | Mostra todos os pacientes cadastrados no sistema |
-| **🔍 Status visual** | Exibe cores diferentes e intuitivas para cada status do paciente |
-| **✅ Aprovar** | Altera o status do paciente diretamente para "Aprovado" |
-| **❌ Rejeitar** | Altera o status do paciente diretamente para "Negado" |
-| **🔄 Atualização** | Recarrega e sincroniza a lista de dados imediatamente após qualquer ação |
-
-
-## 📋 RESUMO DOS ARQUIVOS NOVOS/ALTERADOS
-
-### 📂 Estrutura de Ficheiros do Módulo de Pacientes
-
-| Arquivo | Caminho | O que faz |
-| :--- | :--- | :--- |
-| `patients.ts` | `lib/api/patients.ts` | 🆕 Funções para buscar e atualizar pacientes consumindo a API |
-| `page.tsx` | `app/dashboard/patients/page.tsx` | 🆕 Interface da página da fila regulatória com a listagem |
-
-
-## 🎯 O QUE CADA ARQUIVO FAZ
-
-### 🗂️ Mapeamento de Ficheiros e Funções (Dashboard & Pacientes)
-
-| Arquivo | Função |
-| :--- | :--- |
-| `app/dashboard/page.tsx` | Dashboard com estatísticas do sistema exibidas em cards |
-| `app/dashboard/patients/page.tsx` | Lista de pacientes integrada com ações rápidas de aprovar/rejeitar |
-| `lib/api/dashboard.ts` | Comunicação com o backend para buscar as estatísticas gerais |
-| `lib/api/patients.ts` | Funções para buscar a lista de pacientes e atualizar o status regulatório |
+![alt text](image-3.png)

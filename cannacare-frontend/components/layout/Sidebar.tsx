@@ -8,6 +8,9 @@ interface SidebarProps {
   open: boolean;
 }
 
+// ============================================================
+// LISTA DE MENU - ATUALIZE AQUI!
+// ============================================================
 const menuItems = [
   { name: "Visão Geral", href: "/dashboard", icon: "📊" },
   { name: "Pacientes", href: "/dashboard/patients", icon: "👤" },
