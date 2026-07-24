@@ -19,7 +19,8 @@ const menuItems = [
   { name: "Pacientes", href: "/dashboard/patients", icon: "👤" },
   { name: "Médicos", href: "/dashboard/doctors", icon: "👨‍⚕️" },
   { name: "Receitas", href: "/dashboard/prescriptions", icon: "📋" },
-  { name: "Acolhimento", href: "/dashboard/anamnesis", icon: "🏥" }, // 🆕
+  { name: "Acolhimento", href: "/dashboard/anamnesis", icon: "🏥" },
+  { name: "Produtos", href: "/dashboard/products", icon: "📦" }, // 🆕
   { name: "Estoque", href: "/dashboard/stock", icon: "🏪" },
   { name: "Pedidos", href: "/dashboard/orders", icon: "🛒" },
   { name: "Financeiro", href: "/dashboard/financial", icon: "💰" },

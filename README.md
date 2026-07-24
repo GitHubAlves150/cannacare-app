@@ -96,36 +96,67 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 8
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 9
 
-Módulo: Acolhimento
-Endpoints: POST/GET/PUT/DELETE /api/patients/{id}/anamnesis
 
 ``` bash
-app/dashboard/
-├── patients/
-│   └── [id]/
-│       └── anamnesis/
-│           └── page.tsx                    # 🆕 Lista de anamneses
-└── anamnesis/
-    └── new/
-        └── page.tsx                        # 🆕 Nova anamnese
+
+app/dashboard/products/
+└── page.tsx                    # Lista de produtos + formulário
 
 
 ``` 
 
-## ✅ FLUXO COMPLETO 
+## ✅ O QUE ESTA PÁGINA FAZ
+
+### 📦 Funcionalidades do Módulo de Produtos
+
+| Funcionalidade | Descrição |
+| :--- | :--- |
+| **📋 Lista produtos** | Mostra todos os produtos e óleos cadastrados no sistema |
+| **➕ Cadastrar** | Formulário dinâmico para a adição de um novo produto ao catálogo |
+| **✏️ Editar** | Permite a alteração dos dados cadastrais e especificações do produto |
+| **🔄 Ativar/Desativar** | Altera a disponibilidade e o status ativo do produto na plataforma |
+| **⚠️ Estoque baixo** | Alerta visual automático quando a quantidade do produto atinge o limite mínimo |
+
+## 🎯 PÁGINA PRINCIPAL: /dashboard/products
 
 ```bash
-Menu → Acolhimento → Lista de pacientes
-                        ↓
-                Clicar "Ver Anamneses"
-                        ↓
-            Lista de anamneses do paciente
-                        ↓
-                "Nova Anamnese"
-                        ↓
-            Formulário de anamnese
+┌────────────────────────────────────────────────────────────────────────────┐
+│                         PÁGINA DE PRODUTOS                                 │
+├────────────────────────────────────────────────────────────────────────────┤
+│                                                                            │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  Cabeçalho                                                          │   │
+│  │  "Produtos - Gerencie o catálogo de produtos"                       │   │
+│  │  [+ Novo Produto]  ← Botão para abrir o formulário                  │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                            │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  ⚠️ ALERTA DE ESTOQUE BAIXO (se houver)                             │   │
+│  │  Produtos com quantidade abaixo do mínimo definido                  │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                            │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  FORMULÁRIO DE PRODUTO (aparece ao clicar em "+ Novo Produto")      │   │
+│  │                                                                     │   │
+│  │  Nome: [___________]                                                │   │
+│  │  Descrição: [___________]                                           │   │
+│  │  Preço: [_________]  Estoque Mínimo: [_________]                    │   │
+│  │                                                                     │   │
+│  │  [Cadastrar]  [Cancelar]                                            │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                            │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  TABELA DE PRODUTOS                                                 │   │
+│  │                                                                     │   │
+│  │  Nome         │ Preço    │ Estoque Mínimo │ Status   │ Ações        │   │
+│  │  ──────────── │ ──────── │ ───────────── │ ──────── │ ───────────   │   │
+│  │  Óleo CBD 10% │ R$ 150,00│ 10            │ Ativo    │ [Editar]      │   │
+│  │  Óleo CBD 20% │ R$ 250,00│ 5             │ Ativo    │ [Editar]      │   │
+│  │  Cápsulas CBD │ R$ 80,00 │ 20            │ Inativo  │ [Editar]      │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+└────────────────────────────────────────────────────────────────────────────┘
 
 ``` 
 
