@@ -94,27 +94,52 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
 Objetivo desta etapa:
  xxxxxxxxx
 
-## 📁 ESTRUTURA DE PASTAS DA ETAPA 5
+## 📁 ESTRUTURA DE PASTAS DA ETAPA 6
 
 ``` bash
  cannacare-frontend/
 ├── app/
 │   └── dashboard/
-│       └── doctors/                    # 🆕 Página de médicos
-│           └── page.tsx                # Lista de médicos
+│       └── prescriptions/              # 🆕 Página de receitas
+│           └── page.tsx                # Lista de receitas
 │
 ├── components/
 │   └── forms/
-│       └── DoctorForm.tsx              # 🆕 Formulário de médico
+│       └── PrescriptionForm.tsx        # 🆕 Formulário de receita
 │
 ├── lib/
 │   └── api/
-│       └── doctors.ts                  # 🆕 Serviço de médicos
+│       └── prescriptions.ts            # 🆕 Serviço de receitas
 │
 └── ... (restante da estrutura)
 
 ``` 
+## ✅ O QUE ESTA PÁGINA FAZ
 
+### 📜 Funcionalidades do Módulo de Receitas
+
+| Funcionalidade | Descrição |
+| :--- | :--- |
+| **📋 Lista receitas** | Mostra todas as receitas médicas cadastradas no sistema |
+| **🔍 Status visual** | Exibe marcadores coloridos diferenciando receitas como: Válida, Próxima a vencer ou Vencida |
+| **✅ Validar receita** | Executa a verificação lógica das datas e regras para confirmar se a receita está válida |
+
+### 📐 Arquitetura do Componente Sidebar
+```bash
+
+components/layout/Sidebar.tsx
+├── importações (Link, usePathname, LogOut)
+├── interface SidebarProps
+├── ✅ const menuItems (com Receitas incluído)
+├── export function Sidebar({ open }: SidebarProps)
+│   ├── return (
+│   │   ├── <aside> (sidebar)
+│   │   │   ├── Logo (CannaCare)
+│   │   │   ├── <nav> (menuItems.map)
+│   │   │   └── Logout
+│   │   └── )
+│   └── )
+└── }
+```
 
 Resultado:
-![alt text](image-3.png)
