@@ -103,7 +103,7 @@ Abaixo encontra-se a estrutura de ramificação do Git mapeada para cada módulo
   * **Endpoints:** N/A (Configurações de ambiente de produção e CI/CD)
 
 
-## Etapa 2: Tela de login e resgistro com tema escuro
+## Etapa 4: CRUD de pacientes(Completo)
 
 Objetivo desta etapa:
  xxxxxxxxx
